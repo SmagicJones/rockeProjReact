@@ -1,10 +1,10 @@
-import rocketdab from '../assets/rocketdab.png'
+import rocketdab from "../assets/rocketdab.png";
 
 export const Hero = () => {
   return (
     <section
       id="hero"
-      className="mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+      className="mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row widescreen:section-min-height tallscreen:section-min-height"
     >
       <article className="sm:w-1/2">
         <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
@@ -19,7 +19,7 @@ export const Hero = () => {
           Mars, Jupiter and beyond...
         </p>
         <p className="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
-            Think Acme Rockets.
+          Think Acme Rockets.
         </p>
       </article>
       <img src={rocketdab} alt="" />
