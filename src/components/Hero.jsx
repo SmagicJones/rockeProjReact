@@ -8,10 +8,10 @@ export const Hero = () => {
     >
       <article className="sm:w-1/2">
         <h2 className="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
-          We boldly go
+          We boldly go{" "}
           <span className="text-indigo-700 dark:text-indigo-300">
             where no rocket
-          </span>
+          </span>{" "}
           has gone before...
         </h2>
         <p className="mt-4 max-w-md text-center text-2xl text-slate-700 dar:text-slate-400 sm:text-left">

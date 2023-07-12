@@ -1,8 +1,9 @@
-export const MobileNav = () => {
+export const MobileNav = ({toggleMenuClass}) => {
+  
   return (
     <section
       id="mobile-menu"
-      className="justify-content-center top-68 absolute hidden w-full origin-top flex-col bg-black text-5xl text-pa"
+      className={`justify-content-center top-68 absolute w-full origin-top flex-col bg-black text-5xl text-pa ${toggleMenuClass} animate-open-says-me`}
     >
       <nav
         className="flex min-h-screen flex-col items-center py-8"

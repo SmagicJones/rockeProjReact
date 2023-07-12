@@ -14,7 +14,7 @@ export default {
           "100%": { transform: "scaleY(1)" },
         },
         animation: {
-          "open-says-me": "open-says-me ease-in-out forwards",
+          "open-says-me": "open-says-me 0.5s ease-in-out forwards",
         },
       },
     },

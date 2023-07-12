@@ -1,6 +1,20 @@
+import { useState } from "react";
 import { MobileNav } from "./MobileNav";
 
 export const Header = () => {
+  const [btnState, setBtnState] = useState(true);
+  const [menuState, setMenuState] = useState(true);
+
+  function mobileMenu() {
+    setBtnState(!btnState)
+    setMenuState(!menuState);
+  }
+
+
+  let toggleMenuClass = menuState ? "" : "hidden";
+  let buttonMenuClass = btnState ? "toggle-btn": "";
+  
+
   return (
     <header className="sticky top-0 z-10 bg-teal-700 text-white">
       <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
@@ -10,7 +24,8 @@ export const Header = () => {
         <div>
           <button
             id="hamburger-button"
-            className="relative h-8 w-8 cursor-pointer text-3xl focus:outline-none md:hidden"
+            onClick={mobileMenu}
+            className={`relative h-8 w-8 cursor-pointer text-3xl focus:outline-none md:hidden ${buttonMenuClass}`}
           >
             <div className="absolute top-4 -mt-0 5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:content-['']"></div>
           </button>
@@ -27,7 +42,7 @@ export const Header = () => {
           </nav>
         </div>
       </section>
-      <MobileNav/>
+      <MobileNav toggleMenuClass={toggleMenuClass} />
     </header>
   );
 };
