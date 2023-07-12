@@ -6,16 +6,15 @@ import { Footer } from "./Footer";
 
 export const Main = () => {
   return (
-    <main className="mx-auto max-w-4xl">
+    <main>
       <Hero />
       <hr className="mx-auto bg-black dark:bg-white" />
-      <Rockets/>
+      <Rockets />
       <hr className="mx-auto bg-black dark:bg-white" />
-      <Testimonials/>
+      <Testimonials />
       <hr className="mx-auto bg-black dark:bg-white" />
-      <Contact/>
-      <hr className="mx-auto bg-black dark:bg-white" />
-      <Footer/>
+      <Contact />
+      <Footer />
     </main>
   );
 };

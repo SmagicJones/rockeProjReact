@@ -1,4 +1,29 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 export const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        contact_service,
+        contact_form,
+        form.current,
+        "1bpu6juInhSll6lqp"
+      )
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -7,12 +32,14 @@ export const Contact = () => {
       <h2 className="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
         Contact Us
       </h2>
+
       <form
-        action=""
+        onSubmit={sendEmail}
         className="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl"
       >
         <label htmlFor="subject"></label>
         <input
+          name="subject"
           type="text"
           id="subject"
           required
@@ -30,7 +57,10 @@ export const Contact = () => {
           rows="10"
           className="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
         ></textarea>
-        <button className="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none">
+        <button
+          value="Send"
+          className="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
+        >
           Submit
         </button>
       </form>

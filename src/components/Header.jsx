@@ -2,8 +2,8 @@ import { useState } from "react";
 import { MobileNav } from "./MobileNav";
 
 export const Header = () => {
-  const [btnState, setBtnState] = useState(true);
-  const [menuState, setMenuState] = useState(true);
+  const [btnState, setBtnState] = useState(false);
+  const [menuState, setMenuState] = useState(false);
 
   function mobileMenu() {
     setBtnState(!btnState)
@@ -11,7 +11,7 @@ export const Header = () => {
   }
 
 
-  let toggleMenuClass = menuState ? "" : "hidden";
+  let toggleMenuClass = menuState ? "flex" : "hidden";
   let buttonMenuClass = btnState ? "toggle-btn": "";
   
 
@@ -42,7 +42,7 @@ export const Header = () => {
           </nav>
         </div>
       </section>
-      <MobileNav toggleMenuClass={toggleMenuClass} />
+      <MobileNav toggleMenuClass={toggleMenuClass} mobileMenu={mobileMenu} />
     </header>
   );
 };

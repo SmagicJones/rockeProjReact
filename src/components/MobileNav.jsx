@@ -1,5 +1,4 @@
-export const MobileNav = ({toggleMenuClass}) => {
-  
+export const MobileNav = ({toggleMenuClass, mobileMenu }) => {
   return (
     <section
       id="mobile-menu"
@@ -8,6 +7,7 @@ export const MobileNav = ({toggleMenuClass}) => {
       <nav
         className="flex min-h-screen flex-col items-center py-8"
         aria-label="mobile"
+        onClick={mobileMenu}
       >
         <a href="#hero" className="w-full py-6 text-center hover:opacity-90">
           Home
