@@ -59,7 +59,7 @@ export const Contact = () => {
         ></textarea>
         <button
           value="Send"
-          className="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
+          className="mx-auto w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
         >
           Submit
         </button>
