@@ -1,5 +1,4 @@
 import { rocketData } from "./rocketData";
-
 import { RocketCard } from "./RocketCard";
 
 export const Rockets = () => {
@@ -16,16 +15,11 @@ export const Rockets = () => {
           return (
             <RocketCard
               key={i}
-              itemClass={rocket.itemClass}
               rocketName={rocket.rocketName}
-              rocketNameClass={rocket.rocketNameClass}
               price={rocket.price}
-              priceClass={rocket.priceClass}
-              imageLocation={rocket.image}
+              imageLocation={rocket.imageLocation}
               imageAlt={rocket.imageAlt}
-              imageClass={rocket.imageClass}
               tagline={rocket.tagline}
-              taglineClass={rocket.taglineClass}
             />
           );
         })}

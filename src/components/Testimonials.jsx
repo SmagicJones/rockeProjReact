@@ -15,11 +15,7 @@ export const Testimonials = () => {
         return (
           <TestimonialCard
             key={i}
-            figureClass={testimonial.figcaptionClass}
-            blockquoteClass={testimonial.blockquoteClass}
-            paragraphClass={testimonial.paragraphClass}
             paragraphText={testimonial.paragraphText}
-            figcaptionClass={testimonial.figcaptionClass}
             figcaptionText={testimonial.figcaptionText}
           />
         );
