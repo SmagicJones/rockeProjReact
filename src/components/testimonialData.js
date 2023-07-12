@@ -33,7 +33,7 @@ export const testimonialData = [
       " I knew I not only wanted... I needed Acme's Infinity Rocket for my mission in space. Acme delivered in one day! Nothing says Take me to your leader quite like Acme's Infinity Rocket! 💯",
     figcaptionClass:
       "mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl",
-    figcaptionText: "Buzz Lightyear",
+    figcaptionText: "--- Buzz Lightyear",
   },
 ];
 
