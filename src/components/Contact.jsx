@@ -1,6 +1,4 @@
-
 export const Contact = () => {
-
   return (
     <section
       id="contact"
@@ -11,13 +9,15 @@ export const Contact = () => {
       </h2>
 
       <form
-        netlify
+        data-netlify="true"
         name="contact"
         method="POST"
+        onSubmit="submit"
         // onSubmit="submit"
         // data-netlify="true"
         className="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl"
       >
+        <input type="hidden" name="form_name" value="contact" />
         <label htmlFor="subject"></label>
         <input
           name="subject"
@@ -32,6 +32,7 @@ export const Contact = () => {
         <label htmlFor="message"></label>
         <textarea
           name="message"
+          type="text"
           placeholder="Your message to us"
           id="message"
           cols="30"
@@ -39,7 +40,7 @@ export const Contact = () => {
           className="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
         ></textarea>
         <button
-          value="Send"
+          type="submit"
           className="mx-auto w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
         >
           Submit
