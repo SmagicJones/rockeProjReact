@@ -1,28 +1,5 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        contact_service,
-        contact_form,
-        form.current,
-        "1bpu6juInhSll6lqp"
-      )
-      .then(
-        (result) => {
-          console.log(result);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-  };
 
   return (
     <section
@@ -34,7 +11,11 @@ export const Contact = () => {
       </h2>
 
       <form
-        onSubmit={sendEmail}
+        netlify
+        name="contact"
+        method="POST"
+        onSubmit="submit"
+        data-netlify="true"
         className="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl"
       >
         <label htmlFor="subject"></label>
