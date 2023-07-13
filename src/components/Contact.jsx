@@ -9,6 +9,7 @@ export const Contact = () => {
       </h2>
 
       <form
+        netlify
         data-netlify="true"
         name="contact"
         method="POST"
