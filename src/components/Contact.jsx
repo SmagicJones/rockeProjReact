@@ -14,8 +14,8 @@ export const Contact = () => {
         netlify
         name="contact"
         method="POST"
-        onSubmit="submit"
-        data-netlify="true"
+        // onSubmit="submit"
+        // data-netlify="true"
         className="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl"
       >
         <label htmlFor="subject"></label>
